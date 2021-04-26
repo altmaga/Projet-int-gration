@@ -1,0 +1,56 @@
+.app {
+  background-color: $secondary-blue;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: relative;
+
+  &_img-overlay {
+    position: absolute;
+    left: 50%;
+    @include transform(translateX(-50%));
+    top: -29%;
+    z-index: 1;
+
+    a {
+      display: block;
+    }
+  }
+
+  &_icon {
+    width: 180px;
+    height: 180px;
+    @include border-radius(8px);
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 35px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left {
+    align-items: flex-start;
+  }
+  .right {
+    align-items: flex-end;
+  }
+
+  @media (max-width: $screen-max-md){
+    margin-top: 0;
+    margin-bottom: 0;
+
+    &_img-overlay {
+      display: none;
+    }
+  }
+}

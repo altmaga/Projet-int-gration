@@ -1,0 +1,113 @@
+.footer {
+  background-color: $light-gray;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  &_infos {
+    &-logo {
+      margin-bottom: 65px;
+
+      img {
+        max-width: 90px;
+      }
+    }
+
+    &-copyright {
+      color: $secondary-gray;
+      font-size: 12px;
+      margin-bottom: 40px;
+    }
+
+    &-rs {
+      display: flex;
+      align-items: center;
+
+      .rs {
+        background-color: $white;
+        @include border-radius(50%);
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        @extend .box-shadow;
+        @include transition(all .3s ease);
+
+        .icon {
+          font-size: 15px;
+
+          &.icon-facebook {
+            color: $bc-facebook;
+          }
+
+          &.icon-google {
+            color: $bc-google-4;
+          }
+
+          &.icon-twitter {
+            color: $bc-twitter;
+          }
+
+          &.icon-youtube {
+            color: $bc-youtube;
+          }
+        }
+        &:hover {
+          @include transform(translateY(-5px));
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &_nav {
+    &-list {
+      .title {
+        text-transform: uppercase;
+        font-size: 18px;
+        padding-bottom: 40px;
+        font-family: $roboto-medium;
+      }
+
+      .list {
+        .item {
+          color: $secondary-gray;
+          font-size: 14px;
+          padding-bottom: 3px;
+          margin-bottom: 8px;
+          @include underline-from-left($secondary-gray);
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-max-md){
+    padding-top: 50px;
+    padding-bottom: 80px;
+
+    &_infos {
+      margin-bottom: 30px;
+      text-align: center;
+
+      &-rs {
+        justify-content: center;
+      }
+    }
+
+    &_nav {
+      &-list {
+        margin-bottom: 20px;
+        text-align: center;
+
+        .title {
+          padding-bottom: 18px;
+        }
+      }
+    }
+  }
+}

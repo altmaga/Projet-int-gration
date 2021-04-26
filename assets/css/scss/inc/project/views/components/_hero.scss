@@ -1,0 +1,43 @@
+.hero {
+  &_heading{
+    .content {
+      margin: 80px auto;
+      text-align: center;
+
+      .subtitle {
+        color: $secondary-gray;
+        font-size: 21px;
+        font-family: 'Times New Roman', Times, serif;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+      }
+      .title {
+        font-size: 54px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 600;
+        margin-bottom: 50px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &_img {
+    .img {
+      background-image: url('/assets/img/hero.png');
+      background-size: cover;
+      background-position: center center;
+      height: 600px;
+      width: 100%;
+    }
+  }
+  @media (max-width: $screen-max-sm){
+    &_heading {
+      .content {
+        .title {
+          font-size: 48px;
+          line-height: 46px;
+        }
+      }
+    }
+  }
+}

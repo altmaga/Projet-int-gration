@@ -1,0 +1,33 @@
+.feedback {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .title {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 36px;
+      margin-bottom: 60px;
+    }
+
+    .logo {
+      max-width: 80px;
+    }
+  }
+
+  @media (max-width: $screen-max-md){
+    &_content {
+      align-items: center;
+
+      .title {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+  }
+}

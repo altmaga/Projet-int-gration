@@ -1,0 +1,96 @@
+.product {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: $secondary-yellow;
+
+  .title {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 600;
+    font-size: 36px;
+    padding-bottom: 30px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 80px;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 60px;
+      background-color: $primary-yellow;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      @include transform(translateX(-50%));
+    }
+  }
+
+  &_cards {
+    &-item {
+      background-color: $white;
+      padding: 15px;
+      @include border-radius(8px);
+      margin: 15px;
+      text-align: center;
+      @extend .box-shadow;
+
+      .img {
+        background-color: $secondary-blue;
+        padding: 50px;
+        @include border-radius(8px);
+        @include transform(translateY(-50px));
+      }
+
+      .content {
+        padding: 20px;
+        .name {
+          font-family: 'Times New Roman', Times, serif;
+          font-weight: 600;
+          font-size: 21px;
+          margin-bottom: 18px;
+        }
+
+        .desc {
+          color: $secondary-gray;
+          font-size: 14px;
+          margin-bottom: 12px;
+        }
+
+        .link {
+          color: $blue;
+          font-size: 12px;
+          text-decoration: underline;
+          @include transition(all .3s ease);
+
+          &:hover {
+            @include transform(translateX(5px));
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $screen-max-md){
+    &_cards {
+      &-item {
+        margin: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-max-sm){
+    &_cards {
+      &-item {
+        margin-bottom: 80px;
+      }
+
+      > div {
+          &:last-child {
+          .product_cards-item {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

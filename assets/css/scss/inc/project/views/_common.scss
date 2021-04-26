@@ -1,0 +1,72 @@
+body {
+  color: $primary-gray;
+  font-family: $roboto-regular;
+  overflow-x: hidden;
+}
+
+// BUTTONS
+.btn {
+  @include transition(all .3s ease);
+  &.btn-primary {
+    padding: 16px 40px;
+    border: 1px solid $blue;
+    background-color: $blue;
+    @include border-radius(4px);
+    color: $white;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-right: 12px;
+    font-family: $roboto-medium;
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+
+  &.btn-secondary {
+    padding: 12px 30px;
+    border: 1px solid $blue;
+    @include border-radius(4px);
+    color: $blue;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-right: 12px;
+    font-family: $roboto-medium;
+
+    &:hover {
+      background-color: $blue;
+      color: $white;
+    }
+
+    @media (max-width: $screen-max-sm){
+      padding: 12px;
+    }
+  }
+  &.btn-icon {
+    padding: 12px;
+    border: 1px solid $blue;
+    background-color: $blue;
+    @include border-radius(4px);
+    color: $white;
+    line-height: 1;
+
+    .icon {
+      font-size: 14px;
+    }
+
+    &:hover {
+      background-color: $white;
+      color: $blue;
+    }
+  }
+
+  &:focus {
+    @include box-shadow(none);
+  }
+}
+
+// BOX SHADOW
+.box-shadow {
+  @include box-shadow(0px 6px 10px -1px rgba($secondary-gray, .2));
+}

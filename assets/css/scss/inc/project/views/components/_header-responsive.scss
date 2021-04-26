@@ -1,0 +1,49 @@
+.js-hidden-mobile {
+  overflow: hidden;
+}
+
+@media (max-width: $screen-max-md){
+  .header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .js-menu {
+      @include box-shadow(-25px 6px 10px -1px rgba($secondary-gray, .2));
+      position: absolute;
+      right: -100%;
+      top: 0;
+      bottom: 0;
+      background-color: $light-gray;
+      height: 100vh;
+      width: 50vw;
+      z-index: 1;
+      @include transition(all .3s ease);
+
+      &.js-active {
+        right: 0;
+      }
+
+      .header_nav {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+          flex-direction: column;
+        }
+
+        .btn-close-mobile {
+          display: block;
+        }
+      }
+    }
+
+    &_cta {
+      .btn-menu-mobile {
+        display: block;
+      }
+    }
+  }
+}

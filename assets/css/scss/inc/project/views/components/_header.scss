@@ -1,0 +1,68 @@
+.header {
+  border-bottom: 1px solid rgba($secondary-gray, .5);
+  position: relative;
+  &_logo{
+    a {
+      display: inline-block;
+    }
+  }
+
+  &_nav {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        .header_nav-item {
+          padding: 30px 20px;
+          border-bottom: 2px solid transparent;
+          @include transition(all .3s ease);
+          font-family: $roboto-medium;
+          text-transform: capitalize;
+
+          &:hover, &:focus, &:active {
+            color: $primary-blue;
+            border-bottom: 2px solid $blue;
+          }
+
+          &-current {
+            color: $primary-blue;
+            border-bottom: 2px solid $blue;
+          }
+        }
+      }
+    }
+
+    .btn-close-mobile {
+      display: none;
+      cursor: pointer;
+      @include transition(all .3s ease);
+
+      &:hover {
+        .icon {
+          color: $primary-blue;
+        }
+      }
+    }
+  }
+
+  &_cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn-menu-mobile {
+      display: none;
+      cursor: pointer;
+      margin-left: 12px;
+      @include transition(all .3s ease);
+
+      &:hover {
+        .icon {
+          color: $primary-blue;
+        }
+      }
+    }
+  }
+}
